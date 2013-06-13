@@ -1,0 +1,85 @@
+$toggle-width: 100px;
+$switch-width: 45px;
+
+// Indent/padding for the toggle text
+$text-padding: 10px;
+
+// Start position for the background color
+$gradient-position: $toggle-width;
+
+// Where to move the switch when it's in the on position
+$switch-on-position:    $toggle-width - $switch-width;
+
+// Positioning for the text for off and on states
+$off-stop-position:   $switch-width + $text-padding;
+$off-start-position:  $off-stop-position + $switch-width;
+$on-start-position:   $text-padding - $switch-width;
+$on-stop-position:    $text-padding;
+
+.toggle-wrap {
+  @include transition(all, 0.5s);
+  @include toggle-gradient;
+  -webkit-background-size: 200%;
+  background-size: 200%;
+  background-position: -$gradient-position;
+  border: 1px solid $mid-gray;
+  border-radius: 10px;
+  display: inline-block;
+    height: 30px;
+    width: $toggle-width;
+  line-height: 30px;
+  overflow: hidden;
+  position: relative;
+
+  &:after,
+  &:before {
+    width: ($toggle-width / 2) + $text-padding;
+  }
+
+  &:after {
+    @include position(#{$off-stop-position}, 0);
+    @include transition(all, 0.5s);
+    content: "OFF";
+    color: $dark-gray;
+    display: inline-block;
+    line-height: 30px;
+    position: absolute;
+  }
+
+  &:before {
+    @include position(#{$on-start-position}, 0);
+    @include transition(all, 0.5s);
+    content: "ON";
+    color: #fff;
+    position: absolute;
+  }
+
+  &.on {
+    background-position: 0;
+
+    &:before {
+      @include position(#{$on-stop-position}, 0);
+    }
+
+    &:after {
+      @include position(#{$off-start-position}, 0);
+     }
+  }
+}
+
+.switch {
+  @include position(0, 0);
+  @include transition(all, 0.5s);
+  background: #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+    height: 30px;
+    width: $switch-width;
+  position: absolute;
+  z-index: 10;
+
+  .on & {
+    @include position(#{$switch-on-position}, 0);
+  }
+}

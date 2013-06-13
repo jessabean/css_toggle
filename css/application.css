@@ -1,0 +1,94 @@
+.toggle-wrap {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background: -webkit-gradient(linear, left top, right top, from(#78a447), color-stop(0.5, #78a447), color-stop(0.51, #eeeeee), to(#eeeeee));
+  background: -webkit-linear-gradient(left, #78a447, #78a447 50%, #eeeeee 51%, #eeeeee);
+  background: -moz-linear-gradient(left, #78a447, #78a447 50%, #eeeeee 51%, #eeeeee);
+  background: -ms-linear-gradient(left, #78a447, #78a447 50%, #eeeeee 51%, #eeeeee);
+  background: -o-linear-gradient(left, #78a447, #78a447 50%, #eeeeee 51%, #eeeeee);
+  -webkit-background-size: 200%;
+  background-size: 200%;
+  background-position: -100px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  display: inline-block;
+  height: 30px;
+  width: 100px;
+  line-height: 30px;
+  overflow: hidden;
+  position: relative; }
+  .toggle-wrap:after, .toggle-wrap:before {
+    width: 60px; }
+  .toggle-wrap:after {
+    -webkit-transform: translate(55px, 0);
+    -moz-transform: translate(55px, 0);
+    -o-transform: translate(55px, 0);
+    -ms-transform: translate(55px, 0);
+    transform: translate(55px, 0);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    content: "OFF";
+    color: #666666;
+    display: inline-block;
+    line-height: 30px;
+    position: absolute; }
+  .toggle-wrap:before {
+    -webkit-transform: translate(-35px, 0);
+    -moz-transform: translate(-35px, 0);
+    -o-transform: translate(-35px, 0);
+    -ms-transform: translate(-35px, 0);
+    transform: translate(-35px, 0);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    content: "ON";
+    color: #fff;
+    position: absolute; }
+  .toggle-wrap.on {
+    background-position: 0; }
+    .toggle-wrap.on:before {
+      -webkit-transform: translate(10px, 0);
+      -moz-transform: translate(10px, 0);
+      -o-transform: translate(10px, 0);
+      -ms-transform: translate(10px, 0);
+      transform: translate(10px, 0); }
+    .toggle-wrap.on:after {
+      -webkit-transform: translate(100px, 0);
+      -moz-transform: translate(100px, 0);
+      -o-transform: translate(100px, 0);
+      -ms-transform: translate(100px, 0);
+      transform: translate(100px, 0); }
+
+.switch {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background: #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  width: 45px;
+  position: absolute;
+  z-index: 10; }
+  .on .switch {
+    -webkit-transform: translate(55px, 0);
+    -moz-transform: translate(55px, 0);
+    -o-transform: translate(55px, 0);
+    -ms-transform: translate(55px, 0);
+    transform: translate(55px, 0); }
