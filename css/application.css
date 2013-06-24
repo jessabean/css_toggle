@@ -14,6 +14,7 @@
   background-position: -100px;
   border: 1px solid #dddddd;
   border-radius: 10px;
+  cursor: pointer;
   display: inline-block;
   height: 30px;
   width: 100px;
@@ -80,7 +81,6 @@
   transition: all 0.5s ease-in-out;
   background: #ccc;
   border-radius: 6px;
-  cursor: pointer;
   display: inline-block;
   height: 30px;
   width: 45px;
